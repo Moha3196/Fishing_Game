@@ -2,7 +2,9 @@ class Background {
 
 
   void display() {
+    //Draws the sea
     background(0, 0, 255);
+
     //Draws the grass
     fill(0, 225, 0);
     noStroke();
@@ -33,6 +35,33 @@ class Background {
       triangle(i, height, i+d, height, i+d, height-14);
       noStroke();
       rect(0, height, width, 1);
+    }
+    //Draws the bridge
+    fill(170, 43, 21);
+    stroke(1);
+    rect(0, 85-35, 200, 30);
+    rect(0, 135-35, 200, 30);
+    //Draws the legs of the bridge
+    //Draws left leg
+    ellipse(12.5, 212.5-35, 25, 25);
+    rect(0, 187.5-35, 25, 25);
+    noStroke();
+    rect(0.5, 187.5-35, 24, 26);
+    stroke(1);
+    ellipse(12.5, 187.5-35, 25, 25);
+    //Draws right leg
+    ellipse(202, 212.5-35, 25, 25);
+    rect(189.5, 187.5-35, 25, 25);
+    noStroke();
+    rect(190, 187.5-35, 24, 26);
+    stroke(1);
+    ellipse(202, 187.5-35, 25, 25);
+
+
+    for (float i = 0; i < 200; i += 27) {
+      fill(210, 105, 30);
+      rect(i, 50-35, 25, 150);
+      //quad(i, 50, i, 200, i+25, 200, i+25, 50);
     }
   }
 }
