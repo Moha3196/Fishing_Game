@@ -4,7 +4,7 @@ class Background {
   void display() {
     //Draws the sea
     background(0, 0, 255);
-    
+
     //Draws the bridge
     //Draws the 2 planks Under bridge
     fill(170, 43, 21);
@@ -25,5 +25,12 @@ class Background {
       fill(210, 105, 30);
       rect(i, 50-35, 25, 150);
     }
+    PFont F;
+    F = createFont("Arial", 20, true);
+    textFont(F, 20);
+    fill(255);
+    text("Score:", width/4, 70);
+    fill(255);
+    text(amountCatched, width/4 + 60, 70);
   }
 }

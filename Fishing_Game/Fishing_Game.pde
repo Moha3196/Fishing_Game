@@ -1,10 +1,14 @@
 Fisher fs; 
 FishingRod fr;
 Background bg;
+float landingPosX, landingPosY;
+float landingRadius = 5; 
+int amountCatched = 0;
 int amount = 10;
 Fish[] f = new Fish[amount];
+boolean thrown = false;
 
-void setup() {
+void setup() {  
   fullScreen();
   //size(900,700);
   frameRate(60);
@@ -19,11 +23,17 @@ void setup() {
 void draw() {
   bg.display();
   fs.display();
-  
+
   for (int i = 0; i <amount; i++) {
     f[i].move();
     f[i].display();
     f[i].collision();
   }
   fr.display();
+}
+
+void keyPressed() {
+  if (key == 'f' || key == 'F') {
+    thrown = false;
+  }
 }
