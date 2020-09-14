@@ -36,31 +36,16 @@ class Background {
       noStroke();
       rect(0, height, width, 1);
     }
+    
     //Draws the bridge
-    //Draws the 2 planks Under
+    //Draws the 2 planks Under bridge
     fill(170, 43, 21);
     stroke(1);
     rect(0, 85-35, width, 30);
     rect(0, 135-35, width, 30);
-    ////Draws the legs of the bridge
-    ////Draws left leg
-    //ellipse(12.5, 212.5-35, 25, 25);
-    //rect(0, 187.5-35, 25, 25);
-    //noStroke();
-    //rect(0.5, 187.5-35, 24, 26);
-    //stroke(1);
-    //ellipse(12.5, 187.5-35, 25, 25);
-    ////Draws right leg
-    //ellipse(width-25, 212.5-35, 25, 25);
-    //rect(width-25, 187.5-35, 25, 25);
-    //noStroke();
-    //rect(width-25, 187.5-35, 24, 26);
-    //stroke(1);
-    //ellipse(width-25, 187.5-35, 25, 25);
-
 
     for (float i = 0; i < width; i += 27) {
-      //Draws left leg
+      //Draws the legs of the bridge
       fill(170, 43, 21);
       ellipse(i*4+12.5, 212.5-35, 25, 25);
       rect(i*4, 187.5-35, 25, 25);
