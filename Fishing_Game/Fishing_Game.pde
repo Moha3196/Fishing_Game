@@ -14,6 +14,8 @@ int Space2;
 int Space3;
 int Space4;
 
+Fisher fs; 
+FishingRod fr;
 Background bg;
 int amount = 10;
 Fish[] f = new Fish[amount];
@@ -22,7 +24,9 @@ void setup() {
   fullScreen();
   //size(900,700);
   frameRate(60);
+  fs = new Fisher();
   bg = new Background();
+  fr = new FishingRod();
   for (int i =0; i<amount; i++) {
     f[i]= new Fish((int)random(50, width-50), (int)random(240, height-65), random(2, 5), random(2, 5));
   }
@@ -53,13 +57,17 @@ void setup() {
 void draw() {
 
   bg.display();
-
+  fs.display();
+  //fr.display();
+  
   for (int i = 0; i <amount; i++) {
     f[i].move();
     f[i].display();
     f[i].collision();
   }
-
+  //stroke(0);
+  fr.display();
+  
   //Grass Background
   fill(0, 225, 0);
   noStroke();
