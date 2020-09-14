@@ -37,31 +37,41 @@ class Background {
       rect(0, height, width, 1);
     }
     //Draws the bridge
+    //Draws the 2 planks Under
     fill(170, 43, 21);
     stroke(1);
-    rect(0, 85-35, 200, 30);
-    rect(0, 135-35, 200, 30);
-    //Draws the legs of the bridge
-    //Draws left leg
-    ellipse(12.5, 212.5-35, 25, 25);
-    rect(0, 187.5-35, 25, 25);
-    noStroke();
-    rect(0.5, 187.5-35, 24, 26);
-    stroke(1);
-    ellipse(12.5, 187.5-35, 25, 25);
-    //Draws right leg
-    ellipse(202, 212.5-35, 25, 25);
-    rect(189.5, 187.5-35, 25, 25);
-    noStroke();
-    rect(190, 187.5-35, 24, 26);
-    stroke(1);
-    ellipse(202, 187.5-35, 25, 25);
+    rect(0, 85-35, width, 30);
+    rect(0, 135-35, width, 30);
+    ////Draws the legs of the bridge
+    ////Draws left leg
+    //ellipse(12.5, 212.5-35, 25, 25);
+    //rect(0, 187.5-35, 25, 25);
+    //noStroke();
+    //rect(0.5, 187.5-35, 24, 26);
+    //stroke(1);
+    //ellipse(12.5, 187.5-35, 25, 25);
+    ////Draws right leg
+    //ellipse(width-25, 212.5-35, 25, 25);
+    //rect(width-25, 187.5-35, 25, 25);
+    //noStroke();
+    //rect(width-25, 187.5-35, 24, 26);
+    //stroke(1);
+    //ellipse(width-25, 187.5-35, 25, 25);
 
 
-    for (float i = 0; i < 200; i += 27) {
+    for (float i = 0; i < width; i += 27) {
+      //Draws left leg
+      fill(170, 43, 21);
+      ellipse(i*4+12.5, 212.5-35, 25, 25);
+      rect(i*4, 187.5-35, 25, 25);
+      noStroke();
+      rect(i*4+0.5, 187.5-35, 24, 26);
+      stroke(1);
+      ellipse(i*4+12.5, 187.5-35, 25, 25);
+      //Draws the Top Planks
       fill(210, 105, 30);
       rect(i, 50-35, 25, 150);
-      //quad(i, 50, i, 200, i+25, 200, i+25, 50);
+      
     }
   }
 }
