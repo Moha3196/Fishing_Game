@@ -1,4 +1,19 @@
 class FishingRod {
+  int xPos;
+  int yPos;
+  int R = 0;
+  int G = 0;
+  int B = 0;
+  boolean thrown;
+  
+  FishingRod(int xPos, int yPos, int R, int G, int B, boolean thrown){
+    this.xPos = xPos;
+    this.yPos = yPos;
+    this.R = R;
+    this.G = G;
+    this.B = B;
+    this.thrown = thrown;
+  }
 
   void display() {
     if (0 < mouseX && mouseX < width && mouseY > 190 && mouseY < height-48.75 && thrown == false) {
@@ -18,12 +33,12 @@ class FishingRod {
     if (thrown == true) {
       fill(255, 255, 255);
       ellipse(landingPosX, landingPosY, landingRadius*2, landingRadius*2);
-      stroke(0);
+      stroke(R,G,B);
       PVector mouse = new PVector(mouseX, mouseY);
       PVector center = new PVector(width/2, height/2);
       mouse.sub(center);
       strokeWeight(5);
-      line(width/2+25, 95, landingPosX, landingPosY);
+      line(xPos, yPos, landingPosX, landingPosY);
       strokeWeight(1);
     }
   }

@@ -2,7 +2,7 @@ class Fisher {
   int HeadPosition = 45;
 
   void display() {
-    //Tegner fiskeren.
+    //Draws Fisher.
     fill(0, 0, 0);
     ellipse(width/2, HeadPosition, 70, 70);
     fill(255, 255, 255);

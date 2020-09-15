@@ -7,14 +7,21 @@ int amountCatched = 0;
 int amount = 10;
 Fish[] f = new Fish[amount];
 boolean thrown = false;
+int catchTime=0;
+int changeColourGY = 0;
+int changeColourYR = 0;
+int fishCatch = 0;
 
 void setup() {  
   fullScreen();
   //size(900,700);
   frameRate(60);
+  catchTime = millis();
+  changeColourGY = millis();
+  changeColourYR = millis();
   fs = new Fisher();
   bg = new Background();
-  fr = new FishingRod();
+  fr = new FishingRod(width/2+25, 95, 0, 0, 0, false);
   for (int i =0; i<amount; i++) {
     f[i]= new Fish((int)random(50, width-50), (int)random(240, height-65), random(2, 5), random(2, 5));
   }
@@ -34,6 +41,6 @@ void draw() {
 
 void keyPressed() {
   if (key == 'f' || key == 'F') {
-    thrown = false;
+    fr.thrown = false;
   }
 }
