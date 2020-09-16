@@ -83,7 +83,7 @@ class Fish {
         }
 
         if (timesStalled == 3) {
-          println("removed index: " + i);
+          //println("removed index: " + i);
           f.remove(catchedIndex);
           fr.thrown = false;
           fr.R = 0;
@@ -92,6 +92,14 @@ class Fish {
           amountCatched += 1;
           fishCatch = 0;
           timesStalled = 0;
+        }
+        if (fr.thrown == false && f.get(catchedIndex).velocity.x == 0 && f.get(catchedIndex).velocity.y == 0) {
+          f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
+          f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
+          fr.R = 0;
+          fr.G = 0;
+          fr.B = 0;
+          fishCatch = 0;
         }
         if (fr.G <= 0 && fr.R >= 260 && timesStalled < 3) {
           f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
