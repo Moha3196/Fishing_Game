@@ -54,6 +54,8 @@ class Fish {
         Fishes.location.y = landingPosY;
         Fishes.velocity.x = 0;
         Fishes.velocity.y = 0;
+        //Fishes.velocity.x = Fishes.velocity.x/100000;
+        //Fishes.velocity.y = Fishes.velocity.y/100000;
         fr.R = 0;
         fr.G = 0;
         fr.B = 0;
@@ -129,9 +131,5 @@ class Fish {
       imageMode(CENTER);
       image(fishR, location.x, location.y);
     }
-
-    //fill(0, 51, 102);
-    //stroke(0, 51, 102);
-    //ellipse(location.x, location.y, fR*2, fR*2);
   }
 }
