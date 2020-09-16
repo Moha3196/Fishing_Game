@@ -1,3 +1,4 @@
+PImage startscreen; 
 Fisher fs; 
 FishingRod fr;
 Background bg;
@@ -11,8 +12,11 @@ int catchTime=0;
 int changeColourGY = 0;
 int changeColourYR = 0;
 int fishCatch = 0;
+int stage;
 
 void setup() {  
+  stage = 1;
+  startscreen = loadImage("Startscreen.jpg");
   fullScreen();
   //size(900,700);
   frameRate(60);
@@ -28,6 +32,17 @@ void setup() {
 }
 
 void draw() {
+  if (stage == 1){
+    image(startscreen,0,0);
+    textAlign(CENTER);
+    text("hey",width/2,height/2 + height/10);
+    text("Press any key to start",width/2 ,height/2);
+    
+    if(keyPressed == true){
+      stage = 2;
+    }
+  }
+  if (stage == 2){
   bg.display();
   fs.display();
 
@@ -37,10 +52,11 @@ void draw() {
     f[i].collision();
   }
   fr.display();
-}
 
-void keyPressed() {
+
+
   if (key == 'f' || key == 'F') {
     fr.thrown = false;
   }
+}
 }
