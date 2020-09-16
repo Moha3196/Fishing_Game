@@ -92,6 +92,8 @@ class Fish {
           amountCatched += 1;
           fishCatch = 0;
           timesStalled = 0;
+          //velocityB4Catch.x = 0;
+          //velocityB4Catch.y = 0;
         }
         if (fr.thrown == false && f.get(catchedIndex).velocity.x == 0 && f.get(catchedIndex).velocity.y == 0) {
           f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
@@ -100,14 +102,19 @@ class Fish {
           fr.G = 0;
           fr.B = 0;
           fishCatch = 0;
+          //velocityB4Catch.x = 0;
+          //velocityB4Catch.y = 0;
         }
         if (fr.G <= 0 && fr.R >= 260 && timesStalled < 3) {
           f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
           f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
+          //velocityB4Catch.x = 0;
+          //velocityB4Catch.y = 0;
           fr.thrown = false;
           fr.R = 0;
           fr.G = 0;
           fr.B = 0;
+          fishCatch = 0;
         }
       }
     }
@@ -115,8 +122,16 @@ class Fish {
 
 
   void display() {
-    fill(0, 51, 102);
-    stroke(0, 51, 102);
-    ellipse(location.x, location.y, fR*2, fR*2);
+    if (velocity.x < 0) {
+      imageMode(CENTER);
+      image(fishL, location.x, location.y);
+    } else {
+      imageMode(CENTER);
+      image(fishR, location.x, location.y);
+    }
+
+    //fill(0, 51, 102);
+    //stroke(0, 51, 102);
+    //ellipse(location.x, location.y, fR*2, fR*2);
   }
 }

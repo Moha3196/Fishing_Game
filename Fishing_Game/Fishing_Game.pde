@@ -16,6 +16,8 @@ int catchedIndex = 0;
 int timesStalled = 0;
 int stage;
 PImage startScreen;
+PImage fishL;
+PImage fishR;
 //PVector velocityB4Catch = new PVector(random(2, 5), random(2, 5));
 
 
@@ -26,6 +28,8 @@ void setup() {
   stage = 1;
   //tartscren = new StartScreen();
   startScreen = loadImage("Startscreen.jpg");
+  fishL = loadImage("fiskV.png");
+  fishR = loadImage("fiskH.png");
   //startScreen.resize(width, height);
   catchTime = millis();
   changeColourGY = millis();
