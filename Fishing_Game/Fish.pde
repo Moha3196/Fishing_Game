@@ -1,14 +1,16 @@
 class Fish {
 
   PVector location = new PVector(0, 0);
-  PVector velocity= new PVector(0, 0);
+  PVector velocity = new PVector(0, 0);
   PVector acceleration = new PVector(0, 0);
   boolean catched = false;
   int fR = 15;
+  PVector velocityB4Catch = new PVector(0, 0);
 
-  Fish(int lx, int ly, float vx, float vy) {
+  Fish(int lx, int ly, float vx, float vy, float vxb4, float vyb4) {
     location.set(lx, ly);  
     velocity.set(vx, vy);
+    velocityB4Catch.set(vxb4, vyb4);
   }
 
   void move() {
@@ -46,6 +48,8 @@ class Fish {
       if (distance <= (landingRadius+fR) && fishCatch == 0) {
         fishCatch = 1;
         catchedIndex = i;
+        Fishes.velocityB4Catch.x = Fishes.velocity.x;
+        Fishes.velocityB4Catch.y = Fishes.velocity.y;
         Fishes.location.x = landingPosX;
         Fishes.location.y = landingPosY;
         Fishes.velocity.x = 0;
@@ -88,6 +92,14 @@ class Fish {
           amountCatched += 1;
           fishCatch = 0;
           timesStalled = 0;
+        }
+        if (fr.G <= 0 && fr.R >= 260 && timesStalled < 3) {
+          f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
+          f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
+          fr.thrown = false;
+          fr.R = 0;
+          fr.G = 0;
+          fr.B = 0;
         }
       }
     }

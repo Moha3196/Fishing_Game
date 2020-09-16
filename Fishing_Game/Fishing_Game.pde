@@ -15,6 +15,7 @@ int fishCatch = 0;
 int catchedIndex = 0;
 int timesStalled = 0;
 int stage;
+//PVector velocityB4Catch = new PVector(random(2, 5), random(2, 5));
 
 
 void setup() {  
@@ -30,7 +31,7 @@ void setup() {
   bg = new Background();
   fr = new FishingRod(width/2+25, 95, 0, 0, 0, false);
   for (int i =0; i<amount; i++) {
-    f.add(new Fish((int)random(50, width-50), (int)random(240, height-65), random(2, 5), random(2, 5)));
+    f.add(new Fish((int)random(50, width-50), (int)random(240, height-65), random(2, 5), random(2, 5), 0, 0));
   }
 }
 
