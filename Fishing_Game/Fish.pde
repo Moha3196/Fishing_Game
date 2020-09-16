@@ -37,19 +37,23 @@ class Fish {
       location.set(location.x, 190+11 );
     }
 
-
-
-    for (int i = 0; i < f.length; i++) {
-      float distX = landingPosX - f[i].location.x;
-      float distY = landingPosY - f[i].location.y;
+    //Fish Fishes;
+    for (int i = f.size()-1; i>=0; i--) {
+      Fish Fishes = f.get(i);
+      float distX = landingPosX - Fishes.location.x;
+      float distY = landingPosY - Fishes.location.y;
       float distance = sqrt( (distX*distX) + (distY*distY) );
       if (distance <= (landingRadius+fR) && fishCatch == 0) {
         fishCatch = 1;
-        f[i].velocity.x = 0;
-        f[i].velocity.y = 0;
+        catchedIndex = i;
+        Fishes.location.x = landingPosX;
+        Fishes.location.y = landingPosY;
+        Fishes.velocity.x = 0;
+        Fishes.velocity.y = 0;
         fr.R = 0;
         fr.G = 0;
         fr.B = 0;
+        println("catched index: " + i);
       }
 
       if (fishCatch == 1) {
@@ -74,17 +78,20 @@ class Fish {
           }
         }
 
-        if (fr.R > 245 && fr.G <= 0) {
-          f[i].location.x += 2000;
-          f[i].location.y += 2000;
+        if (timesStalled == 3) {
+          println("removed index: " + i);
+          f.remove(catchedIndex);
           fr.thrown = false;
+          fr.R = 0;
+          fr.G = 0;
+          fr.B = 0;
           amountCatched += 1;
           fishCatch = 0;
+          timesStalled = 0;
         }
       }
     }
   }
-
 
 
   void display() {
