@@ -30,8 +30,8 @@ PImage gf;
 
 
 void setup() { 
-  //fullScreen();
-  size(1280,800);
+  fullScreen();
+  //size(1280,800);
   frameRate(60);
   stage = 1;
   //tartscren = new StartScreen();
@@ -52,7 +52,7 @@ void setup() {
   fs = new Fisher();
   bg = new Background();
   fr = new FishingRod(width/2+25, 95, 0, 0, 0, false);
-  FISH[0] = new Fish(d/4, ChooseYLocation, 2, 0, 0, 0);
+  FISH[0] = new Fish(d/4, ChooseYLocation, 0, 0, 0, 0);
   for (int i =0; i<amount; i++) {
     f.add(new Fish((int)random(50, width-50), (int)random(240, height-65), random(2, 5), random(2, 5), 0, 0));
   }
@@ -101,12 +101,17 @@ void mouseReleased() {
   if (stage == 2 && FishInfo) {
     FishInfo = false;
     randomNumber = round(random(0.5, 7.49));
+    randomKilos = (int)random(3, 55);
   }
-
 }
 
 void keyPressed() {
   final int k = keyCode;
+
+  if (stage == 3 && FISH[0].velocity.x == 0 && FISH[0].velocity.y == 0) {
+    FISH[0].velocity.x = 2;
+  }
+
   if (k == 'f' || k == 'F') {
     fr.thrown = false;
   }

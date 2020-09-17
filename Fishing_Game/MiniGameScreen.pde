@@ -4,7 +4,6 @@ int H = 150;
 int d = 220;
 int ChooseMap = random(1)>0.5?1:2;
 int ChooseYLocation = random(1)>0.5?244:559;
-int Y=0;
 
 void MiniGameScreen() {
   background(0, 0, 255);
@@ -24,6 +23,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -32,6 +33,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -42,6 +45,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -50,6 +55,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -60,6 +67,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -68,6 +77,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -78,6 +89,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -86,6 +99,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -96,6 +111,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -104,6 +121,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -125,6 +144,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -133,6 +154,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -143,6 +166,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -151,6 +176,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -161,6 +188,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -169,6 +198,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -179,6 +210,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -187,6 +220,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -197,6 +232,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -205,6 +242,8 @@ void MiniGameScreen() {
         stage = 2;
         fishCatch = 0;
         FISH[0].location.x = d/4;
+        FISH[0].location.y = random(1)>0.5?244:559;
+        ChooseMap = random(1)>0.5?1:2;
         fr.thrown = false;
         f.get(catchedIndex).velocity.x = f.get(catchedIndex).velocityB4Catch.x;
         f.get(catchedIndex).velocity.y = f.get(catchedIndex).velocityB4Catch.y;
@@ -232,7 +271,18 @@ void MiniGameScreen() {
     fishCatch = 0;
     f.remove(catchedIndex);
     FISH[0].location.x = d/4;
+    FISH[0].location.y = random(1)>0.5?244:559;
+    ChooseMap = random(1)>0.5?1:2;
     fr.thrown = false;
     FishInfo = true;
+  }
+
+  font = createFont("Verdana", 48);
+  textFont(font);
+  if (FISH[0].velocity.x == 0 && FISH[0].velocity.y == 0) {
+    fill(0);
+    rect(width/4, height/3-50, width/2, 66.7);
+    fill(255);
+    text("Press any key to start", width/2, height/3);
   }
 }

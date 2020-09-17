@@ -48,7 +48,7 @@ void GamingScreen() {
     fill(153,217,234);
     rect(width/2-183, height/2-138, 56,34);
     fill(0);
-    text(randomKilos, width/2-160, height/2-110);
+    text(randomKilos, width/2-153, height/2-110);
     
     
   }
