@@ -11,38 +11,37 @@ void GamingScreen() {
     Fisha.collision();
   }
   fr.display();
-  
+
   if (FishInfo == true) {
-          imageMode(CENTER);
-          switch(randomNumber) {
-          case 1:
-            image(af, width/2, height/2);
-            break;
+    imageMode(CENTER);
+    switch(randomNumber) {
+    case 1:
+      image(af, width/2, height/2);
+      break;
 
-          case 2:
-            image(bf, width/2, height/2);
-            break;
+    case 2:
+      image(bf, width/2, height/2);
+      break;
 
-          case 3:
-            image(cf, width/2, height/2);
-            break; 
+    case 3:
+      image(cf, width/2, height/2);
+      break; 
 
-          case 4:
-            image(df, width/2, height/2);
-            break;
+    case 4:
+      image(df, width/2, height/2);
+      break;
 
-          case 5:
-            image(ef, width/2, height/2);
-            break; 
+    case 5:
+      image(ef, width/2, height/2);
+      break; 
 
-          case 6:
-            image(ff, width/2, height/2);
-            break; 
+    case 6:
+      image(ff, width/2, height/2);
+      break; 
 
-          case 7:
-            image(gf, width/2, height/2);
-            break;
-          }
-        }
-  
+    case 7:
+      image(gf, width/2, height/2);
+      break;
+    }
+  }
 }

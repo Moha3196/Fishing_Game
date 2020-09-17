@@ -1,4 +1,3 @@
-//Fish FISH;
 Fish[] FISH = new Fish[1];
 Fisher fs; 
 FishingRod fr;
