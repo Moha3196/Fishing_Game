@@ -1,4 +1,5 @@
 int randomNumber = round(random(0.5, 7.49));
+int randomKilos = (int)random(3,55);
 void GamingScreen() {
   bg.display();
   fs.display();
@@ -43,5 +44,12 @@ void GamingScreen() {
       image(gf, width/2, height/2);
       break;
     }
+    noStroke();
+    fill(153,217,234);
+    rect(width/2-183, height/2-138, 56,34);
+    fill(0);
+    text(randomKilos, width/2-160, height/2-110);
+    
+    
   }
 }

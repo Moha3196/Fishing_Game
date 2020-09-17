@@ -4,7 +4,7 @@ void StartScreen() {
   //background(startScreen);
   image(startScreen, 0, 0, width, height);
   textAlign(CENTER);
-  font = createFont("DejaVuSansMono-Bold", 48);
+  font = createFont("Verdana", 48);
   textFont(font);
   stroke(1);
   strokeWeight(5);
