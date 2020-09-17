@@ -42,8 +42,8 @@ void setup() {
   af = loadImage("Gede.jpg");
   bf = loadImage("Aborre.jpg");
   cf = loadImage("Hvidhaj.jpg");
-  df = loadImage("Ørred.jpg");
-  ef = loadImage("Ål.jpg");
+  df = loadImage("Oerred.jpg");
+  ef = loadImage("Aal.jpg");
   ff = loadImage("Torsk.jpg");
   gf = loadImage("Guldfisk.jpg");
   //startScreen.resize(width, height);
@@ -60,6 +60,7 @@ void setup() {
 }
 
 void draw() {
+  //print(mousePressed);
   if (stage == 1) {
     StartScreen();
 
@@ -69,14 +70,16 @@ void draw() {
   }
   if (stage == 2) {
     GamingScreen();
+    if (keyPressed && FishInfo) {
+      FishInfo = false;
+    }
   }
   if (stage == 3) {
     MiniGameScreen();
   }
 }
 
-
-void mousePressed() {
+void mouseReleased() {
   if (150 < fr.G && fr.G < 255 && timesStalled == 0) {
     fr.G -=100;
     timesStalled += 1;
@@ -95,6 +98,12 @@ void mousePressed() {
     fill(255, 0, 255);
     ellipse(landingPosX-35, landingPosY-35, 15, 15);
   }
+
+  if (stage == 2 && FishInfo) {
+    FishInfo = false;
+    randomNumber = round(random(0.5, 7.49));
+  }
+
 }
 
 void keyPressed() {

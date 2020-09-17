@@ -1,4 +1,4 @@
-
+int randomNumber = round(random(0.5, 7.49));
 void GamingScreen() {
   bg.display();
   fs.display();
@@ -14,7 +14,7 @@ void GamingScreen() {
   
   if (FishInfo == true) {
           imageMode(CENTER);
-          switch(round(random(0.5, 7.49))) {
+          switch(randomNumber) {
           case 1:
             image(af, width/2, height/2);
             break;
