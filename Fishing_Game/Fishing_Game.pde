@@ -31,10 +31,10 @@ PImage gf;
 
 
 void setup() { 
-  fullScreen();
-  //size(900,700);
+  //fullScreen();
+  size(1280,800);
   frameRate(60);
-  stage = 2;
+  stage = 1;
   //tartscren = new StartScreen();
   startScreen = loadImage("Startscreen.jpg");
   fishL = loadImage("fiskV.png");
@@ -70,9 +70,9 @@ void draw() {
   }
   if (stage == 2) {
     GamingScreen();
-    if (keyPressed && FishInfo) {
-      FishInfo = false;
-    }
+    //if (keyPressed && FishInfo) {
+    //  FishInfo = false;
+    //}
   }
   if (stage == 3) {
     MiniGameScreen();
@@ -114,21 +114,21 @@ void keyPressed() {
 
   if (k == 'W') {
     if (FISH[0].velocity.y <= 0) { 
-      FISH[0].velocity.y = -2;
+      FISH[0].velocity.y = -3;
     }
   } else if (k == 'S') {
     if (FISH[0].velocity.y >= 0) { 
-      FISH[0].velocity.y =  2;
+      FISH[0].velocity.y =  3;
     }
   }
 
   if (k == UP) {
     if (FISH[0].velocity.y <= 0) { 
-      FISH[0].velocity.y = -2;
+      FISH[0].velocity.y = -3;
     }
   } else if (k == DOWN) {
     if (FISH[0].velocity.y >= 0) { 
-      FISH[0].velocity.y =  2;
+      FISH[0].velocity.y =  3;
     }
   }
 }
