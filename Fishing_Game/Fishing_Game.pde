@@ -35,7 +35,7 @@ void setup() {
   fullScreen();
   //size(1280,800);
   frameRate(60);
-  stage = 2;
+  stage = 1;
   startScreen = loadImage("Startscreen.jpg");
   fishL = loadImage("fiskV.png");
   fishR = loadImage("fiskH.png");
