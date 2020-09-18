@@ -26,15 +26,15 @@ PImage df;
 PImage ef;
 PImage ff;
 PImage gf;
-//PVector velocityB4Catch = new PVector(random(2, 5), random(2, 5));
+PImage w;
+
 
 
 void setup() { 
   fullScreen();
   //size(1280,800);
   frameRate(60);
-  stage = 1;
-  //tartscren = new StartScreen();
+  stage = 2;
   startScreen = loadImage("Startscreen.jpg");
   fishL = loadImage("fiskV.png");
   fishR = loadImage("fiskH.png");
@@ -45,7 +45,7 @@ void setup() {
   ef = loadImage("Aal.jpg");
   ff = loadImage("Torsk.jpg");
   gf = loadImage("Guldfisk.jpg");
-  //startScreen.resize(width, height);
+  w = loadImage("win.jpg");
   catchTime = millis();
   changeColourGY = millis();
   changeColourYR = millis();
@@ -59,7 +59,6 @@ void setup() {
 }
 
 void draw() {
-  //print(mousePressed);
   if (stage == 1) {
     StartScreen();
 
@@ -75,6 +74,10 @@ void draw() {
   }
   if (stage == 3) {
     MiniGameScreen();
+  }
+  if (amountCatched == 10) {
+    imageMode(CENTER);
+    image(w, width/2, height/2);
   }
 }
 
