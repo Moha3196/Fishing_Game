@@ -300,6 +300,7 @@ void MiniGameScreen() {
   font = createFont("Verdana", 48);
   textFont(font);
   if (FISH[0].velocity.x == 0 && FISH[0].velocity.y == 0) {
+    textAlign(CENTER);
     fill(0);
     rect(width/4, height/3-50, width/2, 66.7);
     fill(255);

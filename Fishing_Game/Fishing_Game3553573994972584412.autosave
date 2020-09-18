@@ -9,7 +9,6 @@ int amountCatched = 0;
 int amount = 10;
 ArrayList<Fish> f = new ArrayList<Fish>();
 boolean thrown = false;
-boolean restart = false;
 int catchTime=0;
 int changeColourGY = 0;
 int changeColourYR = 0;
@@ -27,15 +26,15 @@ PImage df;
 PImage ef;
 PImage ff;
 PImage gf;
-PImage w;
-
+//PVector velocityB4Catch = new PVector(random(2, 5), random(2, 5));
 
 
 void setup() { 
-  fullScreen();
-  //size(1280,800);
+  //fullScreen();
+  size(1280,800);
   frameRate(60);
-  stage = 2;
+  stage = 1;
+  //tartscren = new StartScreen();
   startScreen = loadImage("Startscreen.jpg");
   fishL = loadImage("fiskV.png");
   fishR = loadImage("fiskH.png");
@@ -46,20 +45,21 @@ void setup() {
   ef = loadImage("Aal.jpg");
   ff = loadImage("Torsk.jpg");
   gf = loadImage("Guldfisk.jpg");
-  w = loadImage("win.jpg");
+  //startScreen.resize(width, height);
   catchTime = millis();
   changeColourGY = millis();
   changeColourYR = millis();
   fs = new Fisher();
   bg = new Background();
   fr = new FishingRod(width/2+25, 95, 0, 0, 0, false);
-  FISH[0] = new Fish(d/4, ChooseYLocation, 0, 0, 0, 0);
+  FISH[0] = new Fish(d/4, ChooseYLocation, 2, 0, 0, 0);
   for (int i =0; i<amount; i++) {
     f.add(new Fish((int)random(50, width-50), (int)random(240, height-65), random(2, 5), random(2, 5), 0, 0));
   }
 }
 
 void draw() {
+  //print(mousePressed);
   if (stage == 1) {
     StartScreen();
 
@@ -75,12 +75,6 @@ void draw() {
   }
   if (stage == 3) {
     MiniGameScreen();
-  }
-  if (stage == 4) {
-    EnsScreen();
-  }
-  if (amountCatched == amount) {
-    stage = 4;
   }
 }
 
@@ -107,34 +101,12 @@ void mouseReleased() {
   if (stage == 2 && FishInfo) {
     FishInfo = false;
     randomNumber = round(random(0.5, 7.49));
-    randomKilos = (int)random(3, 55);
   }
+
 }
 
 void keyPressed() {
   final int k = keyCode;
-
-  if (stage == 3 && FISH[0].velocity.x == 0 && FISH[0].velocity.y == 0) {
-    FISH[0].velocity.x = 2;
-  }
-
-  if (stage == 4 && keyPressed /*(k == 'R' || k == 'r')*/) {
-    int extraFish = amount - f.size();
-    amountCatched = 0;
-    FishInfo = false;
-    stage = 2;
-    restart = true;
-    if (restart == true) {
-
-      for (int i = 0; i < extraFish; i++) {
-        f.add(new Fish((int)random(50, width-50), (int)random(240, height-65), random(2, 5), random(2, 5), 0, 0));
-      }
-      if (f.size() == amount) {
-        restart = false;
-      }
-    }
-  }
-
   if (k == 'f' || k == 'F') {
     fr.thrown = false;
   }

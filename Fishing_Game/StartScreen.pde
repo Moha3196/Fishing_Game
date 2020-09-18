@@ -6,8 +6,6 @@ void StartScreen() {
   textAlign(CENTER);
   font = createFont("Verdana", 48);
   textFont(font);
-  stroke(1);
-  strokeWeight(5);
   fill(0);
   rect(width/4, height/3-50, width/2, 66.7);
   fill(255);
