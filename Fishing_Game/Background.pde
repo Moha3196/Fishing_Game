@@ -1,7 +1,5 @@
-class Background {
-
-
-  void display() {
+  //Function that draws Background
+  void Background() {
     //Draws the sea
     background(0, 0, 255);
 
@@ -11,7 +9,7 @@ class Background {
     stroke(1);
     rect(0, 85-35, width, 30);
     rect(0, 135-35, width, 30);
-
+    
     for (float i = 0; i < width; i += 27) {
       //Draws the legs of the bridge
       fill(170, 43, 21);
@@ -25,12 +23,12 @@ class Background {
       fill(210, 105, 30);
       rect(i, 50-35, 25, 150);
     }
-    PFont F;
-    F = createFont("Arial", 20, true);
-    textFont(F, 20);
+   
+    //Displays the Score
+    font = createFont("Arial", 20);
+    textFont(font);
     fill(255);
     text("Score:", width/4, 70);
     fill(255);
-    text(amountCatched, width/4 + 60, 70);
+    text(amountCatched, width/4 + 42.5, 70);
   }
-}

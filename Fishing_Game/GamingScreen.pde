@@ -1,9 +1,13 @@
 int randomNumber = round(random(0.5, 7.49));
-int randomKilos = (int)random(3,55);
+int randomKilos = (int)random(3, 55);
+
+//Function that draws the Game Screen, where 
 void GamingScreen() {
-  bg.display();
+  //Displays the Background and Fishing Man
+  Background();
   fs.display();
 
+  //Updates the Fish elements 
   for (int i = f.size()-1; i>=0; i--) {
     Fish Fisha;
     Fisha = f.get(i);
@@ -11,8 +15,11 @@ void GamingScreen() {
     Fisha.display();
     Fisha.collision();
   }
+
+  //Displays the Fishing Rod
   fr.display();
 
+  //Chooses a random fish to display
   if (FishInfo == true) {
     imageMode(CENTER);
     switch(randomNumber) {
@@ -44,12 +51,12 @@ void GamingScreen() {
       image(gf, width/2, height/2);
       break;
     }
+
+    //Displays the Randomized weight on pictures
     noStroke();
-    fill(153,217,234);
-    rect(width/2-183, height/2-138, 56,34);
+    fill(153, 217, 234);
+    rect(width/2-183, height/2-138, 56, 34);
     fill(0);
     text(randomKilos, width/2-153, height/2-110);
-    
-    
   }
 }

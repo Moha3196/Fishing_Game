@@ -1,7 +1,5 @@
-PFont font;
-
+//Function that draws the Starting Screen
 void StartScreen() {
-  //background(startScreen);
   image(startScreen, 0, 0, width, height);
   textAlign(CENTER);
   font = createFont("Verdana", 48);
